@@ -1,0 +1,138 @@
+:root {
+    --plast-green: #007932;
+    --borders-color: #007932;
+    --background: white;
+    --text-color: black;
+    --btn-color: white;
+}
+
+.container-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.container_authen {
+    width: 550px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--borders-color);
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container_authen>* {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.authen_logo {
+    width: 150px;
+    position: absolute;
+    top: -225px;
+}
+
+.authen_logo img {
+    width: inherit;
+}
+
+.container_authen>*>* {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_authen>*>*>* {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.remember_wrapper .wrapper_text {
+    margin-right: 30px;
+}
+
+.remember_wrapper .wrapper_text {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapper_login,
+.wrapper_passwd {
+    outline: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--borders-color);
+    border-radius: 5px;
+    padding: 2.5px;
+}
+
+.btn_wrapper {
+    justify-content: center;
+}
+
+.wrapper_btn {
+    width: 180px;
+    height: 40px;
+    color: var(--btn-color);
+    padding: 5px 10px;
+    background: var(--borders-color);
+    border-radius: 4px;
+    border: 2px solid var(--borders-color);
+    cursor: pointer;
+}
+
+.wrapper_fcheck {
+    width: 274px;
+    display: flex;
+}
+
+.check_checkbox-fake {
+    width: 20px;
+    height: 20px;
+    background: var(--borders-color);
+    border-radius: 4px;
+}
+
+.checkbox_ticks {
+    position: relative;
+    height: 90%;
+    width: 90%;
+}
+
+.ticks_line {
+    height: 2px;
+    background: var(--btn-color);
+    position: absolute;
+}
+
+.ticks_line1 {
+    width: 7.5px;
+    transform: rotate(60deg);
+    top: 11px;
+    left: 2.5px;
+}
+
+.ticks_line2 {
+    width: 12px;
+    transform: rotate(125deg);
+    top: 9px;
+    left: 5.5px;
+}
+
+.checkbox_ticks {
+    opacity: 0;
+    transition: .3s;
+}
+
+#wrapper_remember:checked~.wrapper_fcheck .check_checkbox-fake .checkbox_ticks {
+    opacity: 1;
+}
